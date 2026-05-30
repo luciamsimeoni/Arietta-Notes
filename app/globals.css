@@ -1,65 +1,64 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: var(--font-garamond), Georgia, serif;
+  --font-serif: var(--font-garamond), Georgia, "Times New Roman", serif;
+  --color-bg: #f0e9e0;
+  --color-text: #1c1a17;
+  --color-muted: #8a7e72;
+  --color-gold: #9e7e52;
+  --color-border: #d8cfc4;
 }
 
-:root {
-  --background: #f8f2f1;
-  --foreground: #1a1714;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0e9e0;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #f0e9e0;
+  color: #1c1a17;
+  font-family: var(--font-garamond), Georgia, "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Prose styles for essay body */
+/* ─── Prose essay body ─── */
 .prose-essai {
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.85;
   color: #2a2320;
-  max-width: 100%;
   font-family: var(--font-garamond), Georgia, serif;
 }
 
 .prose-essai p {
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7em;
 }
 
 .prose-essai h2 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-top: 2.5em;
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-top: 2.8em;
   margin-bottom: 0.8em;
-  color: #1a1714;
-}
-
-.prose-essai h3 {
-  font-size: 1.15rem;
-  font-weight: 500;
-  margin-top: 2em;
-  margin-bottom: 0.6em;
-  color: #1a1714;
+  color: #1c1a17;
+  letter-spacing: 0.01em;
 }
 
 .prose-essai hr {
   border: none;
-  border-top: 1px solid #ddd7d4;
-  margin: 2.5em 0;
+  border-top: 1px solid #c8bfb4;
+  margin: 2.8em 0;
+  width: 3rem;
 }
 
 .prose-essai em {
   font-style: italic;
 }
 
-.prose-essai strong {
-  font-weight: 500;
-}
-
 .prose-essai blockquote {
-  border-left: 2px solid #ddd7d4;
+  border-left: 1px solid #c8bfb4;
   padding-left: 1.5em;
   margin-left: 0;
   color: #6b6560;
@@ -70,9 +69,9 @@ body {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: #bbb4b0;
+  text-decoration-color: #c8bfb4;
 }
 
 .prose-essai a:hover {
-  text-decoration-color: #1a1714;
+  text-decoration-color: #1c1a17;
 }

@@ -8,16 +8,26 @@ export const metadata: Metadata = {
 
 export default function APropos() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f8f2f1" }}>
-      <div className="max-w-2xl mx-auto px-6">
+    <div className="min-h-screen" style={{ backgroundColor: "#f0e9e0" }}>
+      <div className="max-w-[720px] mx-auto px-8">
         <Nav />
 
-        <main>
-          <header className="mb-14">
-            <h1 className="font-serif text-4xl text-stone-800">À propos</h1>
+        <main className="max-w-[560px]">
+          <header className="mb-12">
+            <h1 className="font-serif text-[2.4rem] leading-tight text-[#1c1a17]">
+              À propos
+            </h1>
+            <div
+              className="mt-6"
+              style={{
+                width: "2.5rem",
+                height: "1px",
+                backgroundColor: "#9e7e52",
+              }}
+            />
           </header>
 
-          <div className="prose-essai space-y-6">
+          <div className="prose-essai space-y-7">
             <p>
               Je m&apos;appelle Lucia Simeoni. Je travaille à la création d&apos;Arietta,
               une petite marque de confiserie fondée sur l&apos;idée qu&apos;un bonbon peut
@@ -46,7 +56,7 @@ export default function APropos() {
           </div>
         </main>
 
-        <footer className="mt-32 pb-16" />
+        <footer className="mt-24 pb-10" />
       </div>
     </div>
   );

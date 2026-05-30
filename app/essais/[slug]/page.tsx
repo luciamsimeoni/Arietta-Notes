@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { marked } from "marked";
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Prose from "@/components/Prose";
 import { getAllEssais, getEssaiBySlug, formatDate } from "@/lib/essais";
@@ -37,31 +38,50 @@ export default async function EssaiPage({ params }: Props) {
   const html = await marked(essai.content, { breaks: false });
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f8f2f1" }}>
-      <div className="max-w-2xl mx-auto px-6">
+    <div className="min-h-screen" style={{ backgroundColor: "#f0e9e0" }}>
+      <div className="max-w-[720px] mx-auto px-8">
         <Nav />
 
-        <article>
+        <article className="max-w-[580px]">
           <header className="mb-12">
-            <div className="flex items-baseline gap-4 mb-5 text-sm text-stone-400">
-              <time>{formatDate(essai.date)}</time>
-              <span>{essai.readingTime} de lecture</span>
+            <div className="flex items-center gap-5 mb-7">
+              <time className="text-[0.65rem] tracking-[0.14em] uppercase text-[#8a7e72]">
+                {formatDate(essai.date)}
+              </time>
+              <span className="text-[#d8cfc4]">·</span>
+              <span className="text-[0.65rem] tracking-[0.14em] uppercase text-[#8a7e72]">
+                {essai.readingTime} de lecture
+              </span>
             </div>
-            <h1 className="font-serif text-4xl text-stone-800 leading-tight">
+
+            <h1 className="font-serif text-[2.4rem] leading-[1.15] text-[#1c1a17] mb-6">
               {essai.title}
             </h1>
+
+            <p className="font-serif text-[1.15rem] leading-relaxed text-[#6b5f52] italic">
+              {essai.extrait}
+            </p>
+
+            <div
+              className="mt-8"
+              style={{
+                width: "2.5rem",
+                height: "1px",
+                backgroundColor: "#9e7e52",
+              }}
+            />
           </header>
 
           <Prose html={html} />
         </article>
 
-        <footer className="mt-24 pb-16 border-t border-stone-200 pt-8">
-          <a
+        <footer className="mt-20 pb-12 border-t border-[#d8cfc4] pt-8">
+          <Link
             href="/essais"
-            className="text-stone-400 text-sm hover:text-stone-600 transition-colors"
+            className="text-[0.65rem] tracking-[0.14em] uppercase text-[#8a7e72] hover:text-[#1c1a17] transition-colors"
           >
             ← Tous les essais
-          </a>
+          </Link>
         </footer>
       </div>
     </div>

@@ -8,52 +8,62 @@ export default function Home() {
   const recents = essais.slice(0, 3);
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f8f2f1" }}>
-      <div className="max-w-2xl mx-auto px-6">
+    <div className="min-h-screen" style={{ backgroundColor: "#f0e9e0" }}>
+      <div className="max-w-[720px] mx-auto px-8">
         <Nav />
 
         <main>
-          {/* En-tête */}
-          <header className="mb-20">
-            <h1 className="font-serif text-5xl text-stone-800 mb-2 leading-tight">
-              Lucia Simeoni
-            </h1>
-            <p className="font-serif text-2xl text-stone-400 italic mb-10">essais</p>
-            <p className="text-stone-500 leading-relaxed text-lg max-w-xl">
-              Ces textes partent de l&apos;expérience de créer Arietta, une petite
-              marque de confiserie, pour réfléchir au travail, à la fabrication,
-              au goût, aux objets et aux entreprises.
+          {/* Texte d'introduction */}
+          <section className="mb-14 mt-6">
+            <p className="font-serif text-[1.65rem] leading-[1.65] text-[#1c1a17]">
+              J&apos;écris pour penser à voix haute.
+              <br />
+              Ces essais naissent de la création d&apos;Arietta,
+              <br />
+              une marque de confiserie en cours de développement.
+              <br />
+              Ils explorent le travail, le goût, la fabrication,
+              <br />
+              le temps, les objets et les entreprises.
             </p>
-          </header>
+          </section>
+
+          {/* Filet doré */}
+          <div
+            className="mb-12"
+            style={{
+              width: "2.5rem",
+              height: "1px",
+              backgroundColor: "#9e7e52",
+            }}
+          />
 
           {/* Essais récents */}
           <section>
-            <div className="space-y-0">
+            <p className="text-[0.65rem] tracking-[0.18em] uppercase text-[#8a7e72] mb-6">
+              Derniers essais
+            </p>
+
+            <div>
               {recents.map((essai) => (
                 <EssaiCard key={essai.slug} essai={essai} />
               ))}
             </div>
 
-            {essais.length > 3 && (
-              <div className="border-t border-stone-200 pt-8 mt-2">
-                <Link
-                  href="/essais"
-                  className="text-stone-400 text-sm hover:text-stone-700 transition-colors"
-                >
-                  Tous les essais ({essais.length}) →
-                </Link>
-              </div>
-            )}
+            {/* Lien vers tous les essais */}
+            <div className="pt-10 pb-4">
+              <Link
+                href="/essais"
+                className="group inline-flex items-center gap-3 text-[0.65rem] tracking-[0.18em] uppercase text-[#1c1a17] border-b border-[#1c1a17] pb-px hover:opacity-50 transition-opacity"
+              >
+                Voir tous les essais
+                <span className="group-hover:translate-x-1 transition-transform text-sm">→</span>
+              </Link>
+            </div>
           </section>
         </main>
 
-        <footer className="mt-32 pb-16 border-t border-stone-200 pt-8">
-          <p className="text-stone-400 text-sm">
-            <Link href="/a-propos" className="hover:text-stone-600 transition-colors">
-              À propos
-            </Link>
-          </p>
-        </footer>
+        <footer className="mt-24 pb-10" />
       </div>
     </div>
   );
