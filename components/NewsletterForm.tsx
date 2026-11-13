@@ -19,21 +19,24 @@ export default function NewsletterForm() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "3rem" }}>
+      <p style={{ fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#5c4a2a", fontFamily: "Inter, sans-serif", marginBottom: "1rem" }}>
+        Inscription à la newsletter
+      </p>
       {status === "done" ? (
         <span style={{
           display: "inline-block",
-          border: "1px solid rgba(17,17,17,0.18)",
+          border: "1px solid rgba(17,17,17,0.28)",
           borderRadius: 9999,
           padding: "0.5rem 1.4rem",
           fontSize: "0.72rem",
           letterSpacing: "0.1em",
-          color: "#7a5c2e",
+          color: "#5c4a2a",
           fontFamily: "Inter, sans-serif",
         }}>
           C&apos;est noté.
         </span>
       ) : (
-        <form onSubmit={submit} style={{ display: "inline-flex", alignItems: "center", border: "1px solid rgba(17,17,17,0.18)", borderRadius: 9999, padding: "0.5rem 1rem 0.5rem 1.4rem", gap: "0.6rem" }}>
+        <form onSubmit={submit} style={{ display: "inline-flex", alignItems: "center", border: "1px solid rgba(17,17,17,0.28)", borderRadius: 9999, padding: "0.5rem 1rem 0.5rem 1.4rem", gap: "0.6rem" }}>
           <input
             type="email"
             required
@@ -62,7 +65,7 @@ export default function NewsletterForm() {
               fontSize: "0.62rem",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
-              color: "#8a7e72",
+              color: "#5c4a2a",
               fontFamily: "Inter, sans-serif",
               padding: "0.25rem 0.8rem",
               whiteSpace: "nowrap",
