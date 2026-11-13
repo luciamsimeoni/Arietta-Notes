@@ -3,15 +3,15 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <header className="flex items-baseline justify-between pt-10 pb-0 mb-14">
-      <div className="flex items-baseline gap-3">
+      <div className="flex items-baseline gap-3 flex-wrap">
         <Link
           href="/essais"
-          className="font-serif text-[2.1rem] leading-none tracking-tight text-[#1c1a17] hover:opacity-70 transition-opacity"
+          className="font-serif text-[1.6rem] sm:text-[2.1rem] leading-none tracking-tight text-[#1c1a17] hover:opacity-70 transition-opacity whitespace-nowrap"
         >
           Arietta Confetteria
         </Link>
         <span
-          className="font-serif italic text-[1.25rem] leading-none"
+          className="font-serif italic text-[1rem] sm:text-[1.25rem] leading-none whitespace-nowrap"
           style={{ color: "#7a5c2e" }}
         >
           Notes

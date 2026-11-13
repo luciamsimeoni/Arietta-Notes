@@ -4,7 +4,7 @@ import AudioPlayer from "@/components/AudioPlayer";
 
 export default function EssaiCard({ essai }: { essai: EssaiMeta }) {
   return (
-    <li className="py-4">
+    <li className="py-4 list-none">
       {/* Layout desktop : date + titre + boutons sur une ligne */}
       <div className="hidden sm:flex sm:items-center sm:gap-6">
         <time className="shrink-0 text-[0.63rem] tracking-[0.12em] uppercase text-[#8a7e72] w-28">
@@ -36,12 +36,12 @@ export default function EssaiCard({ essai }: { essai: EssaiMeta }) {
 
       {/* Layout mobile : date, puis titre, puis boutons */}
       <div className="sm:hidden">
-        <time className="block text-[0.6rem] tracking-[0.12em] uppercase text-[#8a7e72] mb-1">
+        <time className="block text-[0.7rem] tracking-[0.12em] uppercase text-[#8a7e72] mb-2">
           {formatDate(essai.date)}
         </time>
         <Link
           href={`/essais/${essai.slug}`}
-          className="font-serif text-[1.15rem] leading-snug text-[#1c1a17] hover:opacity-50 transition-opacity block mb-2"
+          className="font-serif text-[1.35rem] leading-snug text-[#1c1a17] hover:opacity-50 transition-opacity block mb-3"
         >
           {essai.title}
         </Link>

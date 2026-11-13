@@ -17,11 +17,11 @@ export default function EssaisPage() {
         <Nav />
 
         <main>
-          <div>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {essais.map((essai) => (
               <EssaiCard key={essai.slug} essai={essai} />
             ))}
-          </div>
+          </ul>
         </main>
 
         <footer className="mt-24 pb-10" />
