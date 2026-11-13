@@ -74,7 +74,7 @@ export default function AudioPlayer({ src }: { src?: string }) {
       <div style={pillStyle} onClick={toggle}>
         <button
           onClick={(e) => { e.stopPropagation(); toggle(); }}
-          style={{ background: "none", border: "none", padding: 0, cursor: available ? "pointer" : "default", display: "flex", alignItems: "center", color: "#7a5c2e" }}
+          style={{ background: "none", border: "none", padding: 0, cursor: available ? "pointer" : "default", display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1, color: "#7a5c2e" }}
           aria-label={playing ? "Pause" : "Écouter"}
         >
           {playing ? (
@@ -88,7 +88,7 @@ export default function AudioPlayer({ src }: { src?: string }) {
             </svg>
           )}
         </button>
-        <span style={{ fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#7a5c2e", fontFamily: "Inter, sans-serif", fontWeight: 500, whiteSpace: "nowrap" }}>
+        <span style={{ fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#7a5c2e", fontFamily: "Inter, sans-serif", fontWeight: 500, whiteSpace: "nowrap", lineHeight: 1 }}>
           Écouter
         </span>
       </div>
