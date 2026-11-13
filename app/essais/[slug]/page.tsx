@@ -3,6 +3,7 @@ import { marked } from "marked";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Prose from "@/components/Prose";
+import AudioPlayer from "@/components/AudioPlayer";
 import { getAllEssais, getEssaiBySlug, formatDate } from "@/lib/essais";
 import type { Metadata } from "next";
 
@@ -38,7 +39,7 @@ export default async function EssaiPage({ params }: Props) {
   const html = await marked(essai.content, { breaks: false });
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f0e9e0" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#f9f5f1" }}>
       <div className="max-w-[720px] mx-auto px-8">
         <Nav />
 
@@ -52,15 +53,12 @@ export default async function EssaiPage({ params }: Props) {
               <span className="text-[0.65rem] tracking-[0.14em] uppercase text-[#8a7e72]">
                 {essai.readingTime} de lecture
               </span>
+              <AudioPlayer src={essai.audio} />
             </div>
 
             <h1 className="font-serif text-[2.4rem] leading-[1.15] text-[#1c1a17] mb-6">
               {essai.title}
             </h1>
-
-            <p className="font-serif text-[1.15rem] leading-relaxed text-[#6b5f52] italic">
-              {essai.extrait}
-            </p>
 
             <div
               className="mt-8"

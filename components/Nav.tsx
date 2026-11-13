@@ -5,16 +5,16 @@ export default function Nav() {
     <header className="flex items-baseline justify-between pt-10 pb-0 mb-14">
       <div className="flex items-baseline gap-3">
         <Link
-          href="/"
+          href="/essais"
           className="font-serif text-[2.1rem] leading-none tracking-tight text-[#1c1a17] hover:opacity-70 transition-opacity"
         >
-          Lucia Simeoni
+          Arietta Confetteria
         </Link>
         <span
           className="font-serif italic text-[1.25rem] leading-none"
-          style={{ color: "#9e7e52" }}
+          style={{ color: "#7a5c2e" }}
         >
-          essais
+          Notes
         </span>
       </div>
       <nav>

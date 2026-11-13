@@ -1,50 +1,52 @@
 import Link from "next/link";
-import Image from "next/image";
 import { EssaiMeta, formatDate } from "@/lib/essais";
+import AudioPlayer from "@/components/AudioPlayer";
 
 export default function EssaiCard({ essai }: { essai: EssaiMeta }) {
   return (
-    <article className="border-t border-[#d8cfc4] py-8">
-      <Link
-        href={`/essais/${essai.slug}`}
-        className="group flex items-start gap-7"
-      >
-        {/* Image */}
-        <div className="shrink-0 w-[170px] h-[130px] bg-[#ddd4c8] overflow-hidden">
-          {essai.image ? (
-            <Image
-              src={essai.image}
-              alt={essai.title}
-              width={170}
-              height={130}
-              className="w-full h-full object-cover grayscale contrast-[0.9] brightness-95"
-            />
-          ) : (
-            <div className="w-full h-full bg-[#ddd4c8]" />
-          )}
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 min-w-0 flex items-start justify-between gap-4 pt-1">
-          <div>
-            <h2 className="font-serif text-[1.45rem] leading-snug text-[#1c1a17] mb-2.5 group-hover:opacity-70 transition-opacity">
-              {essai.title}
-            </h2>
-            <p className="font-serif text-[0.95rem] leading-relaxed text-[#5a5048] mb-4 line-clamp-3 max-w-sm">
-              {essai.extrait}
-            </p>
-            <time className="text-[0.65rem] tracking-[0.14em] uppercase text-[#8a7e72]">
-              {formatDate(essai.date)}
-            </time>
-          </div>
-          <span
-            className="shrink-0 text-[#1c1a17] text-lg mt-1 group-hover:translate-x-1 transition-transform"
-            aria-hidden
+    <li className="flex items-center gap-6 py-3">
+      <time className="shrink-0 text-[0.63rem] tracking-[0.12em] uppercase text-[#8a7e72] w-28">
+        {formatDate(essai.date)}
+      </time>
+      <div className="flex items-center gap-3 min-w-0">
+        {/* Titre */}
+        <Link
+          href={`/essais/${essai.slug}`}
+          className="font-serif text-[1.2rem] text-[#1c1a17] hover:opacity-50 transition-opacity"
+        >
+          {essai.title}
+        </Link>
+        {/* Icônes côte à côte après le titre */}
+        <div className="flex items-center gap-2 shrink-0">
+          <Link
+            href={`/essais/${essai.slug}`}
+            className="hover:opacity-70 transition-opacity"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.35rem",
+              border: "1px solid #7a5c2e",
+              borderRadius: 9999,
+              padding: "0.25rem 0.65rem",
+              fontSize: "0.68rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#7a5c2e",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 500,
+              backgroundColor: "rgba(122,92,46,0.08)",
+              textDecoration: "none",
+            }}
           >
-            →
-          </span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+            Lire
+          </Link>
+          <AudioPlayer src={essai.audio} />
         </div>
-      </Link>
-    </article>
+      </div>
+    </li>
   );
 }

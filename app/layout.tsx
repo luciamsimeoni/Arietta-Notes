@@ -11,11 +11,11 @@ const garamond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Lucia Simeoni — Essais",
+  title: "Arietta Confetteria — Notes",
   description:
-    "Essais personnels sur le travail, la fabrication, le goût et la création, à travers l'expérience de la marque Arietta.",
+    "Notes sur le travail, la fabrication, le goût et la création, à travers l'expérience de la marque Arietta.",
   openGraph: {
-    title: "Lucia Simeoni — Essais",
+    title: "Arietta Confetteria — Notes",
     description:
       "Essais personnels sur le travail, la fabrication, le goût et la création.",
     locale: "fr_FR",

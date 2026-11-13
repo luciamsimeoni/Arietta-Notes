@@ -11,11 +11,13 @@ export interface EssaiMeta {
   date: string;
   extrait: string;
   image?: string;
+  audio?: string;
   readingTime: string;
 }
 
 export interface Essai extends EssaiMeta {
   content: string;
+  audio?: string;
 }
 
 function formatReadingTime(rt: { text: string; minutes: number }): string {
@@ -37,6 +39,7 @@ export function getAllEssais(): EssaiMeta[] {
         date: data.date as string,
         extrait: data.extrait as string,
         image: data.image as string | undefined,
+        audio: data.audio as string | undefined,
         readingTime: formatReadingTime(readingTime(content)),
       };
     })
@@ -56,6 +59,7 @@ export function getEssaiBySlug(slug: string): Essai | null {
     date: data.date as string,
     extrait: data.extrait as string,
     image: data.image as string | undefined,
+    audio: data.audio as string | undefined,
     readingTime: formatReadingTime(readingTime(content)),
     content,
   };
@@ -66,6 +70,5 @@ export function formatDate(dateStr: string): string {
   return date.toLocaleDateString("fr-FR", {
     year: "numeric",
     month: "long",
-    day: "numeric",
   });
 }
