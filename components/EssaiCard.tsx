@@ -12,14 +12,14 @@ export default function EssaiCard({ essai }: { essai: EssaiMeta }) {
         </time>
         <div className="flex items-center gap-3 min-w-0">
           <Link
-            href={`/essais/${essai.slug}`}
+            href={`/${essai.slug}`}
             className="font-serif text-[1.2rem] text-[#1c1a17] hover:opacity-50 transition-opacity"
           >
             {essai.title}
           </Link>
           <div className="flex items-center gap-2 shrink-0">
             <Link
-              href={`/essais/${essai.slug}`}
+              href={`/${essai.slug}`}
               className="hover:opacity-70 transition-opacity"
               style={{ display:"inline-flex", alignItems:"center", gap:"0.35rem", border:"1px solid #7a5c2e", borderRadius:9999, padding:"0.25rem 0.65rem", fontSize:"0.68rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#7a5c2e", fontFamily:"Inter, sans-serif", fontWeight:500, backgroundColor:"rgba(122,92,46,0.08)", textDecoration:"none" }}
             >
@@ -40,14 +40,14 @@ export default function EssaiCard({ essai }: { essai: EssaiMeta }) {
           {formatDate(essai.date)}
         </time>
         <Link
-          href={`/essais/${essai.slug}`}
+          href={`/${essai.slug}`}
           className="font-serif text-[1.35rem] leading-snug text-[#1c1a17] hover:opacity-50 transition-opacity block mb-3"
         >
           {essai.title}
         </Link>
         <div className="flex items-center gap-2">
           <Link
-            href={`/essais/${essai.slug}`}
+            href={`/${essai.slug}`}
             className="hover:opacity-70 transition-opacity"
             style={{ display:"inline-flex", alignItems:"center", gap:"0.35rem", border:"1px solid #7a5c2e", borderRadius:9999, padding:"0.25rem 0.65rem", fontSize:"0.68rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#7a5c2e", fontFamily:"Inter, sans-serif", fontWeight:500, backgroundColor:"rgba(122,92,46,0.08)", textDecoration:"none" }}
           >

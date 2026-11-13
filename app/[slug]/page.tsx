@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const essai = getEssaiBySlug(slug);
   if (!essai) return {};
   return {
-    title: `${essai.title} — Lucia Simeoni`,
+    title: `${essai.title} — Arietta Confetteria`,
     description: essai.extrait,
     openGraph: {
       title: essai.title,
@@ -62,11 +62,7 @@ export default async function EssaiPage({ params }: Props) {
 
             <div
               className="mt-8"
-              style={{
-                width: "2.5rem",
-                height: "1px",
-                backgroundColor: "#9e7e52",
-              }}
+              style={{ width: "2.5rem", height: "1px", backgroundColor: "#9e7e52" }}
             />
           </header>
 
@@ -75,10 +71,10 @@ export default async function EssaiPage({ params }: Props) {
 
         <footer className="mt-20 pb-12 border-t border-[#d8cfc4] pt-8">
           <Link
-            href="/essais"
+            href="/"
             className="text-[0.65rem] tracking-[0.14em] uppercase text-[#8a7e72] hover:text-[#1c1a17] transition-colors"
           >
-            ← Tous les essais
+            ← Toutes les notes
           </Link>
         </footer>
       </div>

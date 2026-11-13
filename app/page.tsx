@@ -1,8 +1,14 @@
 import Nav from "@/components/Nav";
 import EssaiCard from "@/components/EssaiCard";
 import { getAllEssais } from "@/lib/essais";
+import type { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Notes — Arietta Confetteria",
+  description: "Toutes les notes d'Arietta Confetteria.",
+};
+
+export default function HomePage() {
   const essais = getAllEssais();
 
   return (
@@ -11,7 +17,7 @@ export default function Home() {
         <Nav />
 
         <main>
-          <ul className="mt-6">
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {essais.map((essai) => (
               <EssaiCard key={essai.slug} essai={essai} />
             ))}
