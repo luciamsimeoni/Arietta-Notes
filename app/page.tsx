@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import EssaiCard from "@/components/EssaiCard";
+import NewsletterForm from "@/components/NewsletterForm";
 import { getAllEssais } from "@/lib/essais";
 import type { Metadata } from "next";
 
@@ -25,7 +26,8 @@ export default function HomePage() {
         </main>
 
         <footer className="mt-24 pb-10">
-          <p className="text-[0.6rem] tracking-[0.12em] uppercase text-[#8a7e72]">© Lucia Simeoni, 2026</p>
+          <NewsletterForm />
+          <p className="text-[0.6rem] tracking-[0.12em] uppercase text-[#8a7e72] mt-8">© Lucia Simeoni, 2026</p>
         </footer>
       </div>
     </div>
