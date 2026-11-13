@@ -27,7 +27,7 @@ export default function HomePage() {
 
         <footer className="mt-24 pb-10">
           <NewsletterForm />
-          <p className="text-[0.6rem] tracking-[0.12em] uppercase text-[#8a7e72] mt-8">© Lucia Simeoni, 2026</p>
+          <p className="text-[0.6rem] tracking-[0.12em] uppercase text-[#8a7e72] mt-8 text-center">© Lucia Simeoni, 2026</p>
         </footer>
       </div>
     </div>

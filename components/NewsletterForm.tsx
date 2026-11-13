@@ -18,17 +18,22 @@ export default function NewsletterForm() {
   }
 
   return (
-    <div style={{ marginTop: "2.5rem", paddingTop: "2rem", borderTop: "1px solid #d8cfc4" }}>
-      <p style={{ fontSize: "0.68rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#8a7e72", marginBottom: "0.9rem", fontFamily: "Inter, sans-serif" }}>
-        Recevoir les prochaines notes
-      </p>
-
+    <div style={{ textAlign: "center", marginTop: "3rem" }}>
       {status === "done" ? (
-        <p style={{ fontSize: "0.75rem", color: "#7a5c2e", fontFamily: "Inter, sans-serif" }}>
+        <span style={{
+          display: "inline-block",
+          border: "1px solid rgba(17,17,17,0.18)",
+          borderRadius: 9999,
+          padding: "0.5rem 1.4rem",
+          fontSize: "0.72rem",
+          letterSpacing: "0.1em",
+          color: "#7a5c2e",
+          fontFamily: "Inter, sans-serif",
+        }}>
           C&apos;est noté.
-        </p>
+        </span>
       ) : (
-        <form onSubmit={submit} style={{ display: "flex", gap: "0.6rem", alignItems: "center" }}>
+        <form onSubmit={submit} style={{ display: "inline-flex", alignItems: "center", border: "1px solid rgba(17,17,17,0.18)", borderRadius: 9999, padding: "0.5rem 1rem 0.5rem 1.4rem", gap: "0.6rem" }}>
           <input
             type="email"
             required
@@ -38,13 +43,12 @@ export default function NewsletterForm() {
             style={{
               background: "none",
               border: "none",
-              borderBottom: "1px solid #c8bfb4",
               outline: "none",
-              fontSize: "0.8rem",
+              fontSize: "0.75rem",
               color: "#1c1a17",
               fontFamily: "Inter, sans-serif",
-              padding: "0.2rem 0",
-              width: 200,
+              width: 170,
+              letterSpacing: "0.02em",
             }}
           />
           <button
@@ -52,23 +56,24 @@ export default function NewsletterForm() {
             disabled={status === "loading"}
             style={{
               background: "none",
-              border: "none",
+              border: "1px solid rgba(17,17,17,0.18)",
+              borderRadius: 9999,
               cursor: "pointer",
-              fontSize: "0.65rem",
+              fontSize: "0.62rem",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               color: "#8a7e72",
               fontFamily: "Inter, sans-serif",
-              padding: 0,
+              padding: "0.25rem 0.8rem",
+              whiteSpace: "nowrap",
             }}
           >
             {status === "loading" ? "…" : "S'inscrire"}
           </button>
         </form>
       )}
-
       {status === "error" && (
-        <p style={{ fontSize: "0.7rem", color: "#c0392b", fontFamily: "Inter, sans-serif", marginTop: "0.4rem" }}>
+        <p style={{ fontSize: "0.65rem", color: "#c0392b", fontFamily: "Inter, sans-serif", marginTop: "0.5rem" }}>
           Une erreur est survenue, réessaie.
         </p>
       )}
