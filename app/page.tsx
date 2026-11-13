@@ -24,7 +24,9 @@ export default function HomePage() {
           </ul>
         </main>
 
-        <footer className="mt-24 pb-10" />
+        <footer className="mt-24 pb-10">
+          <p className="text-[0.6rem] tracking-[0.12em] uppercase text-[#8a7e72]">© Lucia Simeoni, 2026</p>
+        </footer>
       </div>
     </div>
   );
