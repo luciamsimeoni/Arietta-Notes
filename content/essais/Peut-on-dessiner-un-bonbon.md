@@ -30,8 +30,6 @@ Une autre difficulté est apparue lorsque j'ai commencé à travailler sur les d
 
 Lorsque j'ai reçu les premiers prototypes, j'ai été surprise par leur taille. Le bonbon que j'avais imaginé était finalement beaucoup trop petit une fois dans ma main. Heureusement, le pâtissier avait anticipé cette difficulté et m'avait envoyé plusieurs propositions de dimensions. J'ai pu les comparer directement et comprendre assez rapidement quel format correspondait le mieux à mon intention.
 
-![](/Peut-on_dessiner_un_bonbon_03.jpg)
-
 Cette expérience m'a rappelé qu'une dimension peut être parfaitement définie sur un dessin sans que l'on parvienne à anticiper ce qu'elle représentera réellement. Je connaissais les mesures que j'avais indiquées, mais je manquais encore de références pour les interpréter correctement dans le cas d'un bonbon.
 
 C'est précisément l'intérêt du prototype : il permet de confronter ce que l'on imagine à un objet que l'on peut manipuler. Dans mon cas, il ne s'agissait pas de modifier l'idée du bonbon mais de trouver les bonnes proportions pour lui donner l'existence que j'avais imaginée.
